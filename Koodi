@@ -1,0 +1,66 @@
+package com.example.androidia;
+
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
+
+public class comment_Screen extends AppCompatActivity {
+    Button add_comment = (Button) findViewById(R.id.add_comment);
+    Button check_history = (Button) findViewById(R.id.check_history);
+    EditText comments = (EditText) findViewById(R.id.comments);
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_comment_screen);
+
+        //Follows what the user types
+        comments.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged (CharSequence s,int start, int count, int after){
+
+            }
+            public void onTextChanged (CharSequence s,int start, int before, int count){
+                String comment = comments.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+
+        });
+        add_comment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                saveComments(); //Saves the comments on XML
+            }
+        });
+        check_history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkHistory(); //shows history page
+            }
+        });
+
+        public void checkHistory(){
+            Intent intent = new Intent(this, History.class);
+            startActivity(intent);
+        }
+
+        public void saveComments(){
+
+        }
+    }
+
+}
