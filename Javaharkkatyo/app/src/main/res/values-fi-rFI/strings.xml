@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Episodi 3: Javan paluu</string>
+    <string name="prompt_email">Sähklöposti</string>
+    <string name="prompt_password">Salasana</string>
+    <string name="action_sign_in">Kirjaudu sisään</string>
+    <string name="Register">Rekisteröidy tässä</string>
+    <string name="invalid_password">Salasana on epäkelpo</string>
+    <string name="login_failed">Kirjautuminen epäonnistui</string>
+    <string name="change_language">Vaihda kieltä</string>
+    <string name="username">Käyttäjätunnus</string>
+    <string name="no_user_msg">Puuttuuko käyttäjä? Luo painamalla tästä!</string>
+    <string name="create_account">Luo käyttäjä</string>
+    <string name="LakeName">Järven nimi</string>
+    <string name="KuntaName">Kunnan nimi</string>
+    <string name="AvgDepth">Avg. Syvyys</string>
+    <string name="ShoreLength">Rannan pituus</string>
+    <string name="LakeArea">Pinta-ala</string>
+</resources>

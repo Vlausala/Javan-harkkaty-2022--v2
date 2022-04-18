@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Episode 3: Return of the java</string>
+    <string name="title_activity_login" translatable="false">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="Register">Register here</string>
+    <string name="invalid_password">Password is invalid</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="change_language">Change language</string>
+    <string name="username">Username</string>
+    <string name="no_user_msg">No user? Tap here to register!</string>
+    <string name="create_account">Create account</string>
+    <string name="LakeName">Lake name</string>
+    <string name="KuntaName">Municipality name</string>
+    <string name="AvgDepth">Avg. Depth</string>
+    <string name="ShoreLength">Shore length</string>
+    <string name="LakeArea">Lake area</string>
+</resources>
