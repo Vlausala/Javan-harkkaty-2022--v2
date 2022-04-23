@@ -32,19 +32,20 @@ public class LoginScreen extends AppCompatActivity {
         Username = findViewById(R.id.login_username);
         Password = findViewById(R.id.login_password);
         SignIn = findViewById(R.id.login_loginbutton);
-        myDB = new DBHelper(this); //TODO Valtteri:  muuta singleton periaatteella toimivaksi
+        myDB = new DBHelper(this);
     }
 
     public void OnclickLogin(View v ){
 
-        String username = Username.getText().toString();
+        String username = "";
+
+        username = Username.getText().toString();
         String password = Password.getText().toString();
 
         boolean success =  myDB.checkUsernameAndPassword(username,password);
         if (success){
             Intent intent = new Intent(LoginScreen.this, MainActivity.class );
             intent.putExtra("Username", username);
-            intent.putExtra("Password", password);
             startActivity(intent);
         } else{
             Toast.makeText(LoginScreen.this, "User was not found.", Toast.LENGTH_SHORT).show();

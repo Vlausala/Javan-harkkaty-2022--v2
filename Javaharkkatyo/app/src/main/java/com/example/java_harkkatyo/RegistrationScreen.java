@@ -44,7 +44,7 @@ public class RegistrationScreen extends AppCompatActivity {
                 RegexHelper.IsPasswordStrong(password) &&
                         password.equals(repassword)
         ){
-            boolean success =  myDB.insertData(user, password);
+            boolean success =  myDB.insertUser(user, password);
             if (success){
                 Toast.makeText(RegistrationScreen.this, "Success!", Toast.LENGTH_SHORT).show();
             } else{

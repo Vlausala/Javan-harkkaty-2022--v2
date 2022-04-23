@@ -8,6 +8,12 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import org.w3c.dom.Comment;
+
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
 public class DBHelper extends SQLiteOpenHelper {
 
     public DBHelper( Context context) {
@@ -17,16 +23,18 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase myDB) {
-        myDB.execSQL("create Table users(username Text primary key, password Text)");
+        myDB.execSQL("CREATE TABLE users(INTEGER PRIMARY KEY, username Text, password Text)");
+        myDB.execSQL("CREATE TABLE comments(INTEGER PRIMARY KEY,username Text, lakename Text, comment Text)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase myDB, int oldVersion, int newVersion) {
-        myDB.execSQL("drop Table if exists users");
+        myDB.execSQL("DROP TABLE IF EXISTS users");
+        myDB.execSQL("DROP TABLE IF EXISTS comments");
     }
 
 
-    public Boolean insertData(String username, String password){
+    public Boolean insertUser(String username, String password){
         SQLiteDatabase myDB = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("username", username);
@@ -47,8 +55,10 @@ public class DBHelper extends SQLiteOpenHelper {
         Cursor cursor = myDB.rawQuery(
                 "select * from users where username = ?", new String[] {username});
         if(cursor.getCount() > 0 ){
+            cursor.close();
             return true;
         } else{
+            cursor.close();
             return false;
         }
     }
@@ -60,10 +70,56 @@ public class DBHelper extends SQLiteOpenHelper {
                 new String[] {username,password}
         );
         if(cursor.getCount() > 0 ){
+            cursor.close();
             return true;
         } else{
+            cursor.close();
             return false;
         }
     }
+
+
+
+    public Boolean InsertComment(String lakename, String comment, String username){
+        SQLiteDatabase myDB = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("username", username);
+        contentValues.put("lakename",lakename);
+        contentValues.put("comment", comment);
+        long result = myDB.insert("comments", null, contentValues);
+        if (result == -1 ){
+            return false;
+        }
+        else {
+            return true;
+        }
+
+    }
+
+    public ArrayList<UserComment> QueryComments(String username){
+        ArrayList<UserComment> comments = new ArrayList<>();
+        SQLiteDatabase myDB = this.getWritableDatabase();
+        Cursor cursor = myDB.rawQuery(
+                "select * from comments where username = ?",
+                new String[] {username}
+        );
+        if (cursor.moveToFirst()){
+            while(!cursor.isAfterLast()){
+
+                String name = cursor.getString( 1);
+                String lakename = cursor.getString(2);
+                String comment = cursor.getString(3);
+
+                UserComment result = new UserComment(name, lakename, comment);
+                comments.add(result);
+
+                cursor.moveToNext();
+            }
+        }
+        cursor.close();
+
+        return comments;
+    }
+
 
 }

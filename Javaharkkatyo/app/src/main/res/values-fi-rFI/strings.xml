@@ -16,4 +16,10 @@
     <string name="AvgDepth">Avg. Syvyys</string>
     <string name="ShoreLength">Rannan pituus</string>
     <string name="LakeArea">Pinta-ala</string>
+    <string name="refreshbutton">Päivitä</string>
+    <string name="inputbutton">Syötä tietoja</string>
+    <string name="AddLakeName">Lisää järvi</string>
+    <string name="AddComment">Lisää kommentti</string>
+    <string name="Save">Tallenna</string>
+    <string name="BrowseComments">Selaa kommentteja</string>
 </resources>

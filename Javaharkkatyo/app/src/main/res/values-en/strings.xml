@@ -6,7 +6,6 @@
     <string name="invalid_password">Password is invalid</string>
     <string name="prompt_password">Password</string>
     <string name="login_failed">Login failed</string>
-    <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="change_language">Change language</string>
     <string name="username">Username</string>
@@ -17,4 +16,10 @@
     <string name="AvgDepth">Avg. Depth</string>
     <string name="ShoreLength">Shore length</string>
     <string name="LakeArea">Area</string>
+    <string name="refreshbutton">Refresh</string>
+    <string name="inputbutton">Input information</string>
+    <string name="AddLakeName">Add lakename</string>
+    <string name="AddComment">Add comment</string>
+    <string name="Save">Save</string>
+    <string name="BrowseComments">Browse comments</string>
 </resources>

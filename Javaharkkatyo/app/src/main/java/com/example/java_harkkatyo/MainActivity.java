@@ -2,6 +2,7 @@ package com.example.java_harkkatyo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
@@ -15,13 +16,14 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    //String LoggedInUser = getIntent().getStringExtra("Username");
-    //String LoggedInPassword = getIntent().getStringExtra("Password");
 
+
+    String LoggedInUser;  //getIntent().getStringExtra("Username");
     private ListView listView;
     ArrayList<Lake> lakes;
     AdapterLake adapter;
     Button button;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
 
         listView = findViewById(R.id.ls);
         button = findViewById(R.id.refresh);
+        LoggedInUser = getIntent().getStringExtra("Username");
+
 
 
 
@@ -48,11 +52,6 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        System.out.println(lakes.size());
-        for (int i=0; i < lakes.size(); i++){
-            System.out.println(lakes.get(i).getLakename());
-        }
-
         adapter = new AdapterLake(MainActivity.this, 0, lakes);
         listView.setAdapter(adapter);
     }
@@ -60,9 +59,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
+    public void CommentScreen(View v){
+        Intent intent = new Intent(MainActivity.this, CommentActivity.class );
+        intent.putExtra("Username", LoggedInUser);
+        startActivity(intent);
+    }
 
 
 
