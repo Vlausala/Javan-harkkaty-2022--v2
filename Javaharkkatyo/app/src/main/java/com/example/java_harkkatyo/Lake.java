@@ -10,6 +10,7 @@ package com.example.java_harkkatyo;
  */
 public class Lake {
 
+    
     private String lakename, kuntaname;
     private Double avgDepth, shoreLength, area;
 
