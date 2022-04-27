@@ -7,99 +7,121 @@
 
     <TextView
         android:id="@+id/textView21"
-        android:layout_width="wrap_content"
-        android:layout_height="29dp"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
         android:layout_marginTop="12dp"
         android:gravity="fill"
-        android:text="@string/KuntaName"
-        app:layout_constraintTop_toBottomOf="@+id/textView20"
-        tools:layout_editor_absoluteX="7dp" />
+        android:text="@string/LakeArea"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintStart_toStartOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
     <TextView
         android:id="@+id/textView20"
-        android:layout_width="wrap_content"
-        android:layout_height="29dp"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
         android:layout_marginTop="12dp"
         android:gravity="fill"
-        android:text="@string/KuntaName"
-        app:layout_constraintTop_toBottomOf="@+id/textView19"
-        tools:layout_editor_absoluteX="7dp" />
+        android:text="@string/ShoreLength"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintStart_toStartOf="@+id/textView19"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <TextView
         android:id="@+id/textView19"
-        android:layout_width="wrap_content"
-        android:layout_height="29dp"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
         android:layout_marginTop="12dp"
         android:gravity="fill"
         android:text="@string/AvgDepth"
-        app:layout_constraintTop_toBottomOf="@+id/textView18"
-        tools:layout_editor_absoluteX="7dp" />
+        app:autoSizeTextType="uniform"
+        app:layout_constraintStart_toStartOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
     <TextView
         android:id="@+id/textView18"
-        android:layout_width="wrap_content"
-        android:layout_height="29dp"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
         android:layout_marginTop="12dp"
         android:gravity="fill"
         android:text="@string/KuntaName"
-        app:layout_constraintTop_toBottomOf="@+id/textView13"
-        tools:layout_editor_absoluteX="7dp" />
+        app:autoSizeTextType="uniform"
+        app:layout_constraintStart_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <TextView
         android:id="@+id/lakename"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="36dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center|end"
+        android:text="TextView"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="@+id/textView13"
         app:layout_constraintStart_toEndOf="@+id/textView13" />
 
     <TextView
-        android:id="@+id/kuntaname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/textView18"
-        app:layout_constraintEnd_toEndOf="@+id/lakename" />
-
-    <TextView
         android:id="@+id/avgDepth"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center|end"
         android:text="TextView"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="@+id/textView19"
-        app:layout_constraintEnd_toEndOf="@+id/kuntaname" />
+        app:layout_constraintStart_toStartOf="@+id/kuntaname" />
 
     <TextView
         android:id="@+id/shorelength"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center|end"
         android:text="TextView"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="@+id/textView20"
-        app:layout_constraintEnd_toEndOf="@+id/avgDepth" />
+        app:layout_constraintStart_toStartOf="@+id/avgDepth" />
 
     <TextView
         android:id="@+id/area"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center|end"
         android:text="TextView"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="@+id/textView21"
-        app:layout_constraintEnd_toEndOf="@+id/shorelength" />
+        app:layout_constraintStart_toStartOf="@+id/shorelength" />
+
+    <TextView
+        android:id="@+id/kuntaname"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center|end"
+        android:text="TextView"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@+id/textView18"
+        app:layout_constraintStart_toStartOf="@+id/lakename" />
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="29dp"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
         android:gravity="fill"
         android:text="@string/LakeName"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="7dp" />
+        app:autoSizeTextType="uniform"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="206dp" />
+        app:layout_constraintGuide_begin="215dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

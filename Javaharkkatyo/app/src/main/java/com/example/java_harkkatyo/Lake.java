@@ -1,5 +1,13 @@
+/*
+ *Course: CT60A2411 Olio-ohjelmointi
+ *Date: 29.4.2022
+ *Group: Matti Lankinen, Valtteri Lausala, Jan-Peter Kauppinen
+ */
 package com.example.java_harkkatyo;
 
+/**
+ * Class used to save information about lakes
+ */
 public class Lake {
 
     private String lakename, kuntaname;
@@ -33,7 +41,7 @@ public class Lake {
         return ""+shoreLength;
     }
 
-    public String  getArea() {
+    public String getArea() {
         return ""+area;
     }
 

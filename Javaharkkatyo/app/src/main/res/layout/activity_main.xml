@@ -24,7 +24,7 @@
         android:layout_width="342dp"
         android:layout_height="63dp"
         android:layout_marginTop="12dp"
-        android:onClick="testi"
+        android:onClick="RefreshData"
         android:text="@string/refreshbutton"
         app:layout_constraintEnd_toEndOf="@+id/ls"
         app:layout_constraintStart_toStartOf="@+id/ls"

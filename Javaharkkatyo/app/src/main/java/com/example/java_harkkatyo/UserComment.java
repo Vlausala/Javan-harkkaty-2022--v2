@@ -1,5 +1,13 @@
+/*
+ *Course: CT60A2411 Olio-ohjelmointi
+ *Date: 29.4.2022
+ *Group: Matti Lankinen, Valtteri Lausala, Jan-Peter Kauppinen
+ */
 package com.example.java_harkkatyo;
 
+/**
+ * Class to hold user-comments
+ */
 public class UserComment {
 
     private String username;
